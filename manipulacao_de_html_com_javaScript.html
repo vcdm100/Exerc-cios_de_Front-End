@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de HTML com JavaScript</title>
+
+</head>
+<body>
+
+    <div id="texto">Título do Texto</div>
+
+    <script>
+        document.getElementById("texto").innerHTML = "Novo texto adicionado!";
+    </script>
+
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+    <p>Parágrafo 4</p>
+
+    <script>
+        var paragrafo = document.getElementsByTagName("p");
+        var i;
+
+        console.log("Parágrafo: " + paragrafo.length);
+
+        for(i = 0; i < paragrafo.length; i++) {
+            paragrafo[i].style.backgroundColor = "#888";
+        }
+    </script>
+
+    <div class="elemento">Elemento da Classe 1</div>
+    <div class="elemento">Elemento da Classe 2</div>
+    <div class="elemento">Elemento da Classe 3</div>
+    <div class="elemento">Elemento da Classe 4</div>
+    
+    <script>
+        var demo = document.getElementsByClassName("elemento");
+
+        demo[2].style.color = "blue";
+
+        demo[1].innerHTML = "Outro novo elemento!";
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.bloco {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.azul {
+    background-color: blue;
+}
+.vermelho {
+    background-color: red;
+}
+.verde {
+    background-color: green;
+}
+.amarelo {
+    background-color: yellow;
+    position: absolute;
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.lado {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}

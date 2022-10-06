@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos via jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            //Eventos de Mouse
+            $('.clicar').click(function(){
+                $(this).css('background', 'green');
+            });
+
+            $('.passar').mouseenter(function(){
+                $(this).css('background', 'orange');
+            });
+
+            $('.deslocar').mouseleave(function(){
+                $(this).css('background', 'red');
+            });
+
+            $('.geral').on('click', function(){
+                $(this).css('background', 'green');
+            });
+            $('.geral').on('mouseenter', function(){
+                $(this).css('background', 'orange');
+            });
+            $('.geral').on('mouseleave', function(){
+                $(this).css('background', 'red');
+            });
+
+            //Eventos de Teclado
+            $("input[name='press']").keypress(function(){
+                $(this).css('background', 'blue');
+                $(this).css('color', 'white');
+                console.log("Tecla foi pressionada!");
+            });
+
+            $("input[name='tecla']").keydown(function(){
+                $(this).css('background', 'orange');
+                console.log("Tecla foi ativada!");
+            });
+
+            $("input[name='tecla']").keyup(function(){
+                $(this).css('background', 'yellow');
+                console.log("Tecla foi soltada!");
+            });
+
+            //Eventos de Formulário
+            $('.nome').change(function(){
+                $(this).css({'color': 'blue', 'text-transform': 'uppercase'});
+            });
+
+            $('.foco').focus(function(){
+                $(this).css('background', 'cyan');
+            });
+            $('.foco').blur(function(){
+                $(this).css('background', 'white');
+            });
+
+            //Eventos de Documento
+            $('p').scroll(function(){
+                $(this).css('color', 'red');
+            });
+
+            $(window).resize(function(){
+                console.log("Tamanho de tela!");
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Eventos via jQuery</h1>
+
+    <h2>Eventos de Mouse</h2>
+
+    <button class="clicar">Clicar</button>
+    <button class="passar">Passar</button>
+    <button class="deslocar">Deslocar</button>
+    <button class="geral">Botão Geral</button>
+
+    <h2>Eventos de Teclado</h2>
+
+    <input type="text" name="press">
+    <input type="text" name="tecla">
+
+    <h2>Eventos de Formulário</h2>
+
+    <input class="nome" type="text" name="nome">
+    <input class="foco" type="text" name="nome">
+
+    <h2>Eventos de Documento</h2>
+
+    <h3>Scroll (Rolagem)</h3>
+    <p style="border: 1px solid black; width: 200px; height: 100px; overflow: scroll;">
+        Aqueles que avaliam como ruim ou péssima a gestão de Claudio Castro 
+        (continua sendo 50%). E recuam conforme melhora a percepção sobre a administração, 
+        passando para 27% entre os que consideram como regular (eram 30%) e 
+        a 8% nos que consideram ótima ou boa (eram 9%);</p>
+
+</body>
+</html>

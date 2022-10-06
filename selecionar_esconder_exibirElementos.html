@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar, esconder e exibir elementos</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('h2').click(function(){
+                alert("Selecionou este elemento!");
+            });
+
+            $('#elemento').click(function(){
+                $(this).css('color', 'red');
+            });
+
+            $('.artigo').click(function(){
+                $(this).css({'background': 'green', 'color': 'blue'});
+            });
+
+            $('input').click(function(){
+                $(this).css('background', 'yellow');
+            })
+
+        });
+
+        function esconder(tag){
+            $(tag).hide();
+        }
+
+        function exibir(tag){
+            $(tag).show();
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Selecionar, esconder e exibir elementos</h1>
+
+    <h2>Selecione um elemento</h2>
+
+    <div id="elemento">Elemento Principal (ID)</div><br/>
+
+    <div class="artigo">Artigo 1</div>
+    <div class="artigo">Artigo 2</div>
+    <div class="artigo">Artigo 3</div>
+
+    <hr/>
+
+    <button onclick="esconder('li')">Esconder</button>
+    <button onclick="exibir('li')">Exibir</button>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <button onclick="esconder('input')">Esconder</button>
+    <button onclick="exibir('input')">Exibir</button>
+
+    <br/><br/>
+
+    <input type="text" name="nome">
+    <input type="text" name="email">
+
+</body>
+</html>

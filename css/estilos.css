@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(192, 192, 192);
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    font-size: 50px;
+}
+
+h3 {
+    color: green;
+    font-size: 30px;
+}
+
+h4 {
+    color: orange;
+    font-size: 30px;
+}
+
+div {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+span {
+    border: 2px solid blue;
+    background-color: lightblue;
+}

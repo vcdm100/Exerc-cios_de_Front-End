@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 500px;
+    margin-left: 30px;
+}
+
+div.box_model {
+    text-align: center;
+    color: orange;
+    border: 3px solid red;
+    padding: 5px;
+    margin: 20px;
+}
+div.bordas {
+    text-align: center;
+    background-color: #9aff92;
+    border: 3px solid green;
+    padding: 10px 40px 30px 50px;
+    margin: 30px 20px 60px 50px;
+}

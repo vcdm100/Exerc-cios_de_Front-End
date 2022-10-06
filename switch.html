@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+
+</head>
+<body>
+    
+    <h1>Switch</h1>
+    
+    <script>
+        var dia = 4;
+
+        switch(dia) {
+            case 1:
+                dia = "Segunda-feira";
+                break;
+            
+            case 2:
+                dia = "Terça-feira";
+                break;
+            
+            case 3:
+                dia = "Quarta-feira";
+                break;
+
+            case 4:
+                dia = "Quinta-feira";
+                break;
+            
+            case 5:
+                dia = "Sexta-feira";
+                break;
+
+            case 6:
+                dia = "Sábado";
+                break;
+
+            default:
+                dia = "Domingo";
+                break;
+        }
+        document.write(dia);
+    </script>
+
+    <script>
+        var lugar = prompt("Onde que você é?", "Digite seu UF/estado");
+
+        switch(lugar) {
+            case 'PE':
+                lugar = "PERNAMBUCO";
+            break;
+
+            default:
+                lugar = "Nenhum lugar";
+            break;
+        }
+    </script>
+    
+</body>
+</html>

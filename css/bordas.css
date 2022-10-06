@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+div {
+    width: 400px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.solid {
+    border: 3px solid red;
+}
+.dotted {
+    border: 3px dotted blue;
+}
+.dashed {
+    border: 3px dashed green;
+}
+.double {
+    border: 3px double yellow;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos via JavaScript</title>
+
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <h2>Eventos de mouse</h2>
+    <script>
+        function clicar() {
+            alert("Clicou!");
+        }
+        function pressionar(x) {
+            x.style.background = "blue";
+        }
+        function soltar(x) {
+            x.style.background = "orange";
+        }
+        function passar(x) {
+            x.style.background = "green";
+        }
+        function deslocar(x) {
+            x.style.background = "red";
+        }
+    </script>
+    <button onclick="clicar()">Clicar</button>
+    <button onmousedown="pressionar(this)">Pressionar</button>
+    <button onmouseup="soltar(this)">Soltar</button>
+    <button onmouseover="passar(this)">Passar</button>
+    <button onmouseout="deslocar(this)">Deslocar</button>
+    
+    <hr/>
+
+    <h2>Eventos do teclado</h2>
+    <script>
+        function pressionarTecla() {
+            console.log("Pressionou uma tecla: " + String.fromCharCode(event.keyCode));
+        }
+        function ativarTecla(event) {
+            console.log("Código de tecla: " + event.keyCode);
+        }
+        function liberarTecla(event) {
+            if(event.shiftkey == true && event.keyCode == 70) {
+                alert("Apertou shift + " + String.fromCharCode(event.keyCode));
+            }
+        }
+    </script>
+    <input onkeypress="pressionarTecla()" type="text" name="tecla"/> 
+    <input onkeydown="ativarTecla(event)" type="text" name="ativo"/> 
+    <input onkeyup="liberarTecla(event)" type="text"/> 
+
+    <hr/>
+
+    <h2>Eventos HTML</h2>
+    <script>
+        function focar(x) {
+            x.style.background = "lightgreen";
+        }
+        function desfocar(x) {
+            x.style.background = "yellow";
+        }
+        function mudar(x) {
+            x.value = x.value.toUpperCase();
+        }
+        function enviar() {
+            alert("Formulário foi enviado!");
+        }
+    </script>
+    Foco: <input onfocus="focar(this)" onblur="desfocar(this)" type="text" name="nome"/>
+    Mudar Valor: <input onchange="mudar(this)" type="text" name="valor"/>
+    <p>
+        <form onsubmit="enviar()">
+            Enviar: <input type="text" name="nome">
+            <input type="submit" value="Enviar">
+        </form>
+    </p>
+    
+</body>
+</html>

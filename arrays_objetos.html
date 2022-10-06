@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays e Objetos</title>
+
+</head>
+<body>
+
+    <h2>Arrays</h2>
+    <script>
+        var frutas = ["Maçã", "Banana", "Laranja", "Mamão"];
+        frutas.push("Limão");
+        document.write(frutas);
+        document.write("<br/>");
+        document.write(frutas[2]);
+        document.write("<br/>");
+        document.write(frutas.length);
+    </script>
+
+    <h2>Objetos</h2>
+    <script>
+        var pessoa = {
+            nome_Completo: "Victor Cláudio Deosdede Moura",
+            idade: 23,
+            cor_Olhos: "marrom",
+            altura: 1.89,
+            andar: function () {
+                return this.nome_Completo + " inicia para andar";
+            }
+        }
+        document.write(pessoa.nome_Completo);
+        document.write("<br/>");
+        document.write(pessoa.andar());
+    </script>
+    
+</body>
+</html>

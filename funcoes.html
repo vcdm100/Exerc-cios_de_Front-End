@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+
+</head>
+<body>
+
+    <h1>Função Normal</h1>
+    <script>
+        function clicar() {
+            alert("Clicou no botão!");
+        }
+    </script>
+    <button onclick="clicar()">Clique aqui</button>
+
+    <h2>Função com Paramêtros</h2>
+    <script>
+        function minhaFuncao (a,b) {
+            return a / b;
+        }
+        document.write(minhaFuncao(10,5));
+    </script>
+
+    <script>
+        function meuNome (nome, sobrenome) {
+            var nomeCompleto = nome + " " + sobrenome;
+            return nomeCompleto;
+        }
+        alert(meuNome("Victor", "Moura"));
+    </script>
+
+    <h3 id="calculo"></h3>
+    <script>
+        var valor1 = prompt("Digite primeiro valor: ");
+        var valor2 = prompt("Digite segundo valor: ");
+
+        funcao(valor1, valor2);
+
+        function funcao(a,b) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            var resultado = a * b;
+
+            document.getElementById("calculo").innerHTML = a + " x " + b + " = " + resultado;
+        }
+    </script>
+    
+</body>
+</html>

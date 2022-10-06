@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts Incorporado, Inline e Externo</title>
+
+    <script>
+        function incorporado() {
+            alert("Aqui usa script incorporado!");
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1><a href="#" onclick="incorporado()">Script Incorporado</a></h1>
+
+    <h2><a href="#" onclick="alert('Aqui usa script inline!')">Script Inline</a></h2>
+
+    <h3><a href="#" onclick="externo()">Script Externo</a></h3>
+
+    <script type="text/javascript" src="./js/script_externo.js"></script>
+    
+</body>
+</html>

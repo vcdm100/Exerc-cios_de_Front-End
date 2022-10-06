@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.float {
+    border: 2px solid red;
+    padding: 16px;
+    margin: 5px;
+    float: left;
+}
+.float_r {
+    border: 2px solid red;
+    padding: 16px;
+    margin: 5px;
+    float: right;
+}
+
+.texto {
+    clear: both;
+    margin: 5px;
+    padding: 20px;
+}

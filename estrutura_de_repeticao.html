@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Repetição</title>
+
+</head>
+<body>
+
+    <h1>Estrutura de Repetição</h1>
+
+    <h2>For</h2>
+    <script>
+        var valor = " ";
+        var i;
+        
+        for(i = 0; i <= 10; i++) {
+            valor += i + "<br/>";
+        }
+        document.write(valor);
+    </script>
+
+    <p id = "demo">Mais um exemplo...</p>
+    <script>
+        let text = " ";
+        
+        for (let i = 0; i < 5; i++) {
+            text += "Ordem " + i + "<br/>";
+        }
+        document.getElementById("demo").innerHTML = text;        
+    </script>
+
+    <p id = "demo2">Mais um exemplo...</p>
+    <script>
+        const frutas = ["Laranja","Limão", "Uva", "Maçã"];
+        let text2 = " ";
+
+        for (let i = 0; i < frutas.length; i++) {
+            text2 += frutas[i] + "<br/>";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+
+    <h2>While</h2>
+    <script>
+        var valor = " ";
+        var i = 0;
+
+        while(i <= 5) {
+            valor += "Ordem " + i + "<br/>";
+            i++;
+        }
+        document.write(valor);
+    </script>
+
+    <p id = "demo3">Mais um exemplo...</p>
+    <script>
+        let text3 = " ";
+        let y = 0;
+
+        while(y < 10) {
+            text3 += y + "<br/>";
+            y++;
+        }
+        document.getElementById("demo3").innerHTML = text3;
+    </script>
+
+    <h2>Do / While</h2>
+    <script>
+        var valor = " ";
+        var i = 0;
+
+        do {
+            valor += i + "<br/>";
+            i++;
+        } while(i <= 20);
+        document.write(valor);
+    </script>
+
+    <h2>For / in</h2>
+    <script>
+        var pessoa = {
+            nome: "Victor",
+            sobrenome: "Moura",
+            idade: 23,
+            estado_civil: "Solteiro",
+            altura: 1.89
+        }
+        var valor = " ";
+        var p;
+
+        for (p in pessoa) {
+            valor += p + ": " + pessoa[p] + "<br/>";
+        }
+        document.write(valor);
+    </script>
+
+    <p id = "demo4">Mais um exemplo...</p>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = " ";
+
+        for(let z in numbers) {
+            txt += numbers[z] + "<br/>";
+        }
+        document.getElementById("demo4").innerHTML = txt;
+    </script>
+    
+</body>
+</html>
